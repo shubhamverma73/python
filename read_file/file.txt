@@ -1,0 +1,6 @@
+🔹 Final clarity 🔥
+Call same hai (.) → isliye confusion hota hai
+Difference internal working me hai
+Static method = bas utility function
+Class method = class pe kaam
+Instance method = object pe kaam
