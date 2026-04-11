@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "role": "system",
+        "content": "You are a helpful assistant that provides information about the latest advancements in artificial intelligence."
+    },
+    {
+        "id": 2,
+        "role": "user",
+        "content": "Can you tell me about the latest advancements in artificial intelligence?"
+    },
+    {
+        "id": 3,
+        "role": "assistant",
+        "content": "Certainly! Some of the latest advancements in artificial intelligence include improvements in natural language processing, such as the development of more sophisticated language models like GPT-4. Additionally, there have been significant strides in computer vision, enabling better image recognition and analysis. AI is also being increasingly integrated into various industries, including healthcare for diagnostics and treatment planning, and in autonomous vehicles for improved safety and navigation."
+    },
+    {
+        "id": 5,
+        "role": "developer",
+        "content": "A software developer designs, builds, tests, and maintains applications and systems software."
+    },
+    {
+        "id": 4,
+        "role": "Tester",
+        "content": "Test role is for testing purposes only and than create ticket and assign to developer."
+    },
+    {
+        "id": 6,
+        "role": "Test...",
+        "content": "Test."
+    }
+]
