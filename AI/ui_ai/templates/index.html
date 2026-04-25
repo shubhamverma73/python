@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Ollama Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">
+          <div class="brand-badge">AI</div>
+          <div>
+            <h1>Local Ollama Chat</h1>
+            <p>Browser UI for your llama3:8b agent</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Model</h2>
+          <p>llama3:8b via LangChain + Ollama</p>
+        </div>
+
+        <div class="info-card">
+          <h2>How to use</h2>
+          <p>Type your question, press Enter, and get a reply inside the browser.</p>
+        </div>
+      </div>
+
+      <button id="resetBtn" class="secondary-btn">Reset chat</button>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div>
+          <h2>Chat</h2>
+          <p>Runs locally on your machine</p>
+        </div>
+        <span class="status-pill">● Ready</span>
+      </header>
+
+      <section id="chatMessages" class="chat-messages">
+        <div class="message bot">
+          <div class="avatar">AI</div>
+          <div class="bubble">
+            <p>Hello! I am your local Ollama assistant. Ask me anything.</p>
+          </div>
+        </div>
+      </section>
+
+      <form id="chatForm" class="chat-form">
+        <textarea id="messageInput" placeholder="Type your question here..." rows="1"></textarea>
+        <button type="submit" class="primary-btn">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ollama SQL Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">
+          <div class="brand-badge">DB</div>
+          <div>
+            <h1>Ollama SQL Chat</h1>
+            <p>Ask database questions in natural language</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2>Model</h2>
+          <p>{{ model_name }}</p>
+        </div>
+
+        <div class="info-card">
+          <h2>Database</h2>
+          <p>{{ db_name }}</p>
+        </div>
+
+        <div class="info-card">
+          <h2>Allowed tables</h2>
+          <p>{{ allowed_tables }}</p>
+        </div>
+
+        <div class="info-card">
+          <h2>Example questions</h2>
+          <p>
+            - Sabse mehenga recharge plan kaun sa hai?<br>
+            - Kis user ne kaunsa plan liya hai?<br>
+            - Kitne users active plan par hain?
+          </p>
+        </div>
+      </div>
+
+      <button id="resetBtn" class="secondary-btn">Reset chat</button>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div>
+          <h2>Database Assistant</h2>
+          <p>Natural language → SQL → Answer</p>
+        </div>
+        <span class="status-pill">● Local</span>
+      </header>
+
+      <section id="chatMessages" class="chat-messages">
+        <div class="message bot">
+          <div class="avatar">AI</div>
+          <div class="bubble">
+            <p>Hello! Ask me questions about your MySQL tables.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="debugPanel" class="debug-panel hidden">
+        <div class="debug-box">
+          <h3>Generated SQL</h3>
+          <pre id="sqlOutput"></pre>
+        </div>
+        <div class="debug-box">
+          <h3>Raw SQL Result</h3>
+          <pre id="resultOutput"></pre>
+        </div>
+      </section>
+
+      <form id="chatForm" class="chat-form">
+        <textarea id="messageInput" placeholder="Type your database question here..." rows="1"></textarea>
+        <div class="actions">
+          <label class="checkbox-row">
+            <input type="checkbox" id="toggleDebug" />
+            <span>Show SQL details</span>
+          </label>
+          <button type="submit" class="primary-btn">Ask</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
