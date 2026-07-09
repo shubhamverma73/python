@@ -7,3 +7,5 @@ app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
 app.include_router(user_routes.router)
+
+# uvicorn app.main:app --reload
