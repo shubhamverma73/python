@@ -118,3 +118,12 @@ class user_model():
         except mysql.connector.Error as err:
             print(f"Error: {err}")
             return "Error occurred while deleting user", 500
+        
+
+# ------- all things available in same part -----------
+# Database Connection ❌
+# SQL Queries ❌
+# Business Logic ❌
+# File Upload ❌
+# Pagination ❌
+# Error Handling ❌
