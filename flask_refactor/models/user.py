@@ -19,4 +19,5 @@ class User(db.Model):
             "name": self.name,
             "email": self.email,
             "profile_image": self.profile_image,
+            "role": self.user_role.name if self.user_role else None,
         }

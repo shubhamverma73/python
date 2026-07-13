@@ -22,7 +22,7 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=1)
+    JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=10)
 
     UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER", "uploads")
 

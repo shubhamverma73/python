@@ -24,6 +24,8 @@ class UserService:
                 "per_page": pagination.per_page,
                 "total_records": pagination.total,
                 "total_pages": pagination.pages,
+                "has_next": pagination.has_next,
+                "has_prev": pagination.has_prev
             },
         }, 200
 
