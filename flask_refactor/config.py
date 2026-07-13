@@ -24,6 +24,8 @@ class Config:
 
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=10)
 
+    SQLALCHEMY_ENGINE_OPTIONS = { "echo": False } # Set to True to enable SQL query logging for debugging purposes
+
     UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER", "uploads")
 
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
