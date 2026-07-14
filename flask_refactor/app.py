@@ -75,5 +75,5 @@ def create_app():
 
 app = create_app()
 
-if __name__ == "__main__":
+if __name__ == "__main__": # This condition checks if the script is being run directly (not imported as a module). If it is, the Flask application will start running in debug mode. This is useful for development and testing, as it provides detailed error messages and automatically reloads the server when code changes are detected.
     app.run(debug=True)
